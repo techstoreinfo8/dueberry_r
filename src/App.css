@@ -1,0 +1,267 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e7ef;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #29213e;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  color: white;
+  background: #7952d6;
+}
+
+.header-caption {
+  color: #777286;
+  font-size: 14px;
+}
+
+.welcome-section {
+  padding: 42px 0 26px;
+}
+
+.eyebrow {
+  color: #7952d6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome-section h1 {
+  margin: 10px 0;
+  color: #29213e;
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: -1.5px;
+}
+
+.welcome-section > p:last-child {
+  color: #777286;
+  line-height: 1.7;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.stat-card,
+.reminder-form,
+.reminder-list {
+  padding: 22px;
+  border: 1px solid #e8e7ef;
+  border-radius: 18px;
+  background: white;
+}
+
+.stat-card span {
+  display: block;
+  color: #777286;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 12px;
+  color: #29213e;
+  font-size: 30px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.reminder-form h2,
+.reminder-list h2 {
+  margin-top: 0;
+  color: #29213e;
+  font-size: 20px;
+}
+
+.reminder-form label {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  color: #494258;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reminder-form input,
+.reminder-form select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dedbe8;
+  border-radius: 10px;
+  background: white;
+  color: #29213e;
+  font: inherit;
+}
+
+.reminder-form input:focus,
+.reminder-form select:focus {
+  outline: 2px solid #bba7f3;
+  outline-offset: 1px;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #7952d6;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reminder-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid #eeedf3;
+  border-radius: 14px;
+}
+
+.reminder-info {
+  min-width: 0;
+}
+
+.category-label,
+.status-label {
+  color: #7952d6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reminder-card h3 {
+  overflow-wrap: anywhere;
+  margin: 8px 0;
+  color: #29213e;
+}
+
+.reminder-card p,
+.empty-state {
+  color: #777286;
+  font-size: 14px;
+}
+
+.reminder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reminder-actions button {
+  padding: 9px 11px;
+  border: 1px solid #dedbe8;
+  border-radius: 9px;
+  background: white;
+  color: #494258;
+  cursor: pointer;
+}
+
+.reminder-actions .delete-button {
+  color: #b42335;
+}
+
+.reminder-card.completed {
+  opacity: 0.65;
+}
+
+.reminder-card.completed h3 {
+  text-decoration: line-through;
+}
+
+.app-footer {
+  padding: 32px 0 12px;
+  color: #777286;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .header-caption {
+    max-width: 130px;
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .welcome-section {
+    padding-top: 30px;
+  }
+
+  .stats-grid {
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 14px 10px;
+  }
+
+  .stat-card span {
+    font-size: 12px;
+  }
+
+  .stat-card strong {
+    font-size: 25px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reminder-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.database-error {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #a12626;
+  font-size: 14px;
+}
