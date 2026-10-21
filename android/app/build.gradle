@@ -16,8 +16,19 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file(project.property("DUEBERRY_STORE_FILE"))
+            storePassword project.property("DUEBERRY_STORE_PASSWORD")
+            keyAlias project.property("DUEBERRY_KEY_ALIAS")
+            keyPassword project.property("DUEBERRY_KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         release {
+	signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
